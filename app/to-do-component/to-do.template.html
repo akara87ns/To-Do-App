@@ -3,9 +3,15 @@
         <h1 class="to-do-app--title">To Do App</h1>
         <p class="to-do-app--subtitle">You can write a list of thing you need to do here:</p>
 
-        <form class="to-do-app--form">
-            <input type="text" placeholder="I need to...">
+        <form class="to-do-app--form" ng-submit="addToDoTask(newTask)">
+            <input type="text" placeholder="I need to..." ng-model="newTask">
             <input type="submit" value="Add new task">
         </form>
+
+        <ul class="to-do-app--list">
+            <li class="to-do-app--list-item" ng-repeat="task in tasks">
+                {{task}}
+            </li>
+        </ul>
     </div>
 </div>

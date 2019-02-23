@@ -5,11 +5,14 @@ angular.module('toDoApp')
             $scope.tasks = []
 
             $scope.addToDoTask = function(task) {
-
+                if ($scope.newTask) {
+                    $scope.tasks.push(task);
+                }
+                $scope.newTask = "";
             }
 
             $scope.removeToDoTask = function(task) {
-                
+
             }
         }
     });
