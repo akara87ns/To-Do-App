@@ -11,6 +11,7 @@
         <ul class="to-do-app--list">
             <li class="to-do-app--list-item" ng-repeat="task in tasks">
                 {{task}}
+                <i class="fas fa-times-circle" ng-click="removeToDoTask(task)"></i>
             </li>
         </ul>
     </div>

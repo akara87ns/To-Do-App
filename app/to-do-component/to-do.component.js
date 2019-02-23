@@ -12,7 +12,8 @@ angular.module('toDoApp')
             }
 
             $scope.removeToDoTask = function(task) {
-
+                $scope.taskIndex = $scope.tasks.indexOf(task);
+                $scope.tasks.splice($scope.taskIndex, 1);
             }
         }
     });
