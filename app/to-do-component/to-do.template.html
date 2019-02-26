@@ -9,7 +9,8 @@
         </form>
 
         <ul class="to-do-app--list">
-            <li class="to-do-app--list-item" ng-repeat="task in tasks">
+            <!-- Track by $index introduced, because application was crashing when duplicate items were added to the list -->
+            <li class="to-do-app--list-item" ng-repeat="task in tasks track by $index">
                 {{task}}
                 <i class="fas fa-times-circle" ng-click="removeToDoTask(task)"></i>
             </li>
