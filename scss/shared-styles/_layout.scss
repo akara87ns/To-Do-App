@@ -1,0 +1,12 @@
+.container {
+    width: 96%;
+    min-height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 720px) {
+        width: 50%;
+    }
+}

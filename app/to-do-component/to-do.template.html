@@ -1,7 +1,7 @@
 <div class="container">
     <div class="to-do-app">
-        <h1 class="to-do-app--title">To Do App</h1>
-        <p class="to-do-app--subtitle">You can write a list of thing you need to do here:</p>
+        <h1 class="to-do-app--title">To do app</h1>
+        <p class="to-do-app--subtitle">You can write a list of things you need to do here:</p>
 
         <form class="to-do-app--form" ng-submit="addToDoTask(newTask)">
             <input type="text" placeholder="I need to..." ng-model="newTask">
@@ -11,8 +11,8 @@
         <ul class="to-do-app--list">
             <!-- Track by $index introduced, because application was crashing when duplicate items were added to the list -->
             <li class="to-do-app--list-item" ng-repeat="task in tasks track by $index">
-                {{task}}
-                <i class="fas fa-times-circle" ng-click="removeToDoTask(task)"></i>
+                <span class="to-do-app--list-item-text">{{task}}</span>
+                <i class="fas fa-times-circle to-do-app--list-item-remove" ng-click="removeToDoTask(task)" title="Remove task"></i>
             </li>
         </ul>
     </div>

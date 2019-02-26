@@ -1,0 +1,58 @@
+.to-do-app {
+    background: lighten($primary, 50%);
+    border-radius: $xsm;
+    padding: $lg;
+    box-shadow: $box-shadow;
+    transition: all 300ms ease-out;
+    &--title,
+    &--subtitle,
+    &--form input[type="text"],
+    &--form input[type="submit"] {
+        margin-bottom: $sm;
+    }
+    &--title {
+        font-size: $lg;
+        color: $primary-dark;
+        text-transform: capitalize;
+    }
+    &--subtitle {
+        font-size: ($sm*1.1);
+    }
+    &--form {
+        input[type="text"] {
+            display: block;
+            width: 100%;
+            padding: $sm;
+        }
+        input[type="submit"] {
+            background: $accent;
+            border: none;
+            border-radius: $xsm;
+            color: lighten($primary, 50%);
+            padding: $sm $lg;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: $box-shadow-hover;
+            }
+        }
+    }
+    &--list-item {
+        display: flex;
+        justify-content: space-between;
+        background: $primary;
+        padding: $sm;
+        margin-bottom: $xsm; 
+        box-shadow: $box-shadow; 
+    } 
+    &--list-item-text {
+        max-width: 350px;
+    }
+    &--list-item-remove {
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

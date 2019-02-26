@@ -1,0 +1,192 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.ng-enter, .ng-leave {
+  -webkit-transition: 300ms all ease-out;
+  transition: 300ms all ease-out;
+}
+
+.ng-enter {
+  opacity: 0;
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+}
+
+.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.ng-leave {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.ng-leave.ng-leave-active {
+  opacity: 0;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+.container {
+  width: 96%;
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 720px) {
+  .container {
+    width: 50%;
+  }
+}
+
+.to-do-app {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  -webkit-box-shadow: 0px 2px 4px rgba(54, 54, 54, 0.5);
+          box-shadow: 0px 2px 4px rgba(54, 54, 54, 0.5);
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.to-do-app--title, .to-do-app--subtitle,
+.to-do-app--form input[type="text"],
+.to-do-app--form input[type="submit"] {
+  margin-bottom: 1rem;
+}
+
+.to-do-app--title {
+  font-size: 2rem;
+  color: #222;
+  text-transform: capitalize;
+}
+
+.to-do-app--subtitle {
+  font-size: 1.1rem;
+}
+
+.to-do-app--form input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+}
+
+.to-do-app--form input[type="submit"] {
+  background: #008329;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.to-do-app--form input[type="submit"]:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0px 2px 4px #363636;
+          box-shadow: 0px 2px 4px #363636;
+}
+
+.to-do-app--list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #f2f2f2;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  -webkit-box-shadow: 0px 2px 4px rgba(54, 54, 54, 0.5);
+          box-shadow: 0px 2px 4px rgba(54, 54, 54, 0.5);
+}
+
+.to-do-app--list-item-text {
+  max-width: 350px;
+}
+
+.to-do-app--list-item-remove {
+  cursor: pointer;
+}
+
+.to-do-app--list-item-remove:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=main.css.map */

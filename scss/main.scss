@@ -1,0 +1,9 @@
+// *** Shared styles ***
+@import 'shared-styles/reset';
+@import 'shared-styles/variables';
+@import 'shared-styles/animations';
+@import 'shared-styles/common';
+@import 'shared-styles/layout';
+
+// *** Component specific styles ***
+@import '../app/to-do-component/to-do.styles';
