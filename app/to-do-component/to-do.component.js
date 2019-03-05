@@ -6,16 +6,19 @@ angular.module('toDoApp')
 
             $scope.tasks = []
 
-            $scope.addToDoTask = function(task) {
+            $scope.addToDoTask = function(taskItem) {
                 if ($scope.newTask) {
-                    $scope.tasks.push(task);
+                    $scope.tasks.push({
+                        taskName: taskItem,
+                        id: new Date().getTime()
+                    });
                 }
                 $scope.newTask = "";
-                console.log($scope.li);
+                // console.log($scope.li);
             }
 
-            $scope.removeToDoTask = function(task) {
-                $scope.taskIndex = $scope.tasks.indexOf(task);
+            $scope.removeToDoTask = function(taskItem) {
+                $scope.taskIndex = $scope.tasks.indexOf(taskItem);
                 $scope.tasks.splice($scope.taskIndex, 1);
             }
         }
