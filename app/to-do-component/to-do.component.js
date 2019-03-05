@@ -4,7 +4,14 @@ angular.module('toDoApp')
         controller: function ToDoController($scope) {
             $scope.li = false;
 
-            $scope.tasks = []
+            $scope.tasks = [];
+
+            // To-Do tasks will be saved on local storage
+            var localStorageData = localStorage['data'];
+
+            if (localStorageData !== undefined) {
+                $scope.tasks = JSON.parse(localStorageData);
+            }
 
             $scope.addToDoTask = function(taskItem) {
                 if ($scope.newTask) {
@@ -14,12 +21,15 @@ angular.module('toDoApp')
                     });
                 }
                 $scope.newTask = "";
-                // console.log($scope.li);
+                
+                localStorage['data'] = JSON.stringify($scope.tasks);
             }
 
             $scope.removeToDoTask = function(taskItem) {
                 $scope.taskIndex = $scope.tasks.indexOf(taskItem);
                 $scope.tasks.splice($scope.taskIndex, 1);
+
+                localStorage['data'] = JSON.stringify($scope.tasks);
             }
         }
     });
